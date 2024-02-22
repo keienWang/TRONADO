@@ -1,0 +1,72 @@
+{
+  "_args": [
+    [
+      "git+https://github.com/tornadocash/websnark.git#4c0af6a8b65aabea3c09f377f63c44e7a58afa6d",
+      "/Users/wangenkai/Documents/tornado/tornado-cli"
+    ]
+  ],
+  "_from": "git+https://github.com/tornadocash/websnark.git#4c0af6a8b65aabea3c09f377f63c44e7a58afa6d",
+  "_id": "websnark@git+https://github.com/tornadocash/websnark.git#4c0af6a8b65aabea3c09f377f63c44e7a58afa6d",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/websnark",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "git+https://github.com/tornadocash/websnark.git#4c0af6a8b65aabea3c09f377f63c44e7a58afa6d",
+    "rawSpec": "git+https://github.com/tornadocash/websnark.git#4c0af6a8b65aabea3c09f377f63c44e7a58afa6d",
+    "saveSpec": "git+https://github.com/tornadocash/websnark.git#4c0af6a8b65aabea3c09f377f63c44e7a58afa6d",
+    "fetchSpec": "https://github.com/tornadocash/websnark.git",
+    "gitCommittish": "4c0af6a8b65aabea3c09f377f63c44e7a58afa6d"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/tornadocash/websnark.git#4c0af6a8b65aabea3c09f377f63c44e7a58afa6d",
+  "_spec": "git+https://github.com/tornadocash/websnark.git#4c0af6a8b65aabea3c09f377f63c44e7a58afa6d",
+  "_where": "/Users/wangenkai/Documents/tornado/tornado-cli",
+  "author": {
+    "name": "Jordi Baylina"
+  },
+  "bugs": {
+    "url": "https://github.com/iden3/websnark/issues"
+  },
+  "dependencies": {
+    "big-integer": "^1.6.42"
+  },
+  "description": "big integer library to work in Zq",
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "eslint": "^5.14.0",
+    "eslint-plugin-mocha": "^5.3.0",
+    "eslint-plugin-webassembly": "^1.8.4",
+    "mocha": "^6.1.4",
+    "package": "^1.0.1",
+    "snarkjs": "git+https://github.com/peppersec/snarkjs.git#869181cfaf7526fe8972073d31655493a04326d5",
+    "wasmbuilder": "0.0.3"
+  },
+  "homepage": "https://github.com/iden3/websnark#readme",
+  "keywords": [
+    "bigint",
+    "bignum",
+    "biginteger",
+    "zq",
+    "elliptic",
+    "curve",
+    "prime",
+    "field"
+  ],
+  "license": "GPL-3.0",
+  "main": "index.js",
+  "name": "websnark",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iden3/websnark.git"
+  },
+  "scripts": {
+    "build": "node tools/buildwasm.js; browserify main.js -o build/websnark.js --exclude worker_threads --exclude crypto; cp build/websnark.js example/websnark.js",
+    "buildwasm": "node tools/buildwasm.js",
+    "test": "mocha --experimental-worker"
+  },
+  "version": "0.0.4"
+}
